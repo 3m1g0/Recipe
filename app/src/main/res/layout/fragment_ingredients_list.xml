@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f3f5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/home_ingredients_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="12dp"
+        android:text="Select the ingredients you have and search for the recipes" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_ingredients_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/home_search_recipes"
+        android:layout_below="@+id/home_ingredients_header"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        android:padding="@dimen/item_offset" />
+
+    <Button
+        android:id="@+id/home_search_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Search Recipes"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
