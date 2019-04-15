@@ -53,14 +53,14 @@ public class RecipeListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         final DBHelper dbHelper = new DBHelper(getActivity());
-        String ings = "";
+        StringBuilder ings = new StringBuilder();
         ArrayList<RecipeItem> recipeList = dbHelper.getRecipesByIngredients(ingredients);
-        for(RecipeItem item : recipeList) {
-            Log.d("MSPSP", item.getName());
-            ings += item.getName() + ", ";
+        for(String item : ingredients) {
+            Log.d("MSPSP", item);
+            ings.append(item).append(", ");
         }
 
-        ings = ings.substring(0, ings.length() - 2);
+        ings = new StringBuilder(ings.substring(0, ings.length() - 2));
 
         TextView header = view.findViewById(R.id.home_recipes_header);
         header.setText("Recipes related to " + ings);
