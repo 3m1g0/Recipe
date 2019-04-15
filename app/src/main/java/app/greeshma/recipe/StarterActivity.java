@@ -18,6 +18,7 @@ public class StarterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent= new Intent(StarterActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
