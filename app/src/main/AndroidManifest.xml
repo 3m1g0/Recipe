@@ -14,7 +14,7 @@
         <activity
             android:name=".StarterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_starter"
+            android:label="Quick Pick"
             android:screenOrientation="portrait"
             android:theme="@style/FullscreenTheme">
             <intent-filter>
